@@ -5,9 +5,11 @@ from televisores.marca import Marca
 if __name__ == "__main__":
     marca1 = Marca("Semsung")
     marca2 = Marca("Lj")
-
+    TV.setNumTV(10)
+    
     tv1 = TV(marca1, True)
     tv2 = TV(marca2, False)
+    tv3 = TV(marca2, False)
 
     tv1.setPrecio(2000)
     tv2.setCanal(90)
@@ -26,3 +28,4 @@ if __name__ == "__main__":
     print(tv1.getPrecio())
     print(tv1.getMarca().getNombre())
     print(tv1.getCanal())
+    print(TV.numTV)
