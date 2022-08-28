@@ -31,8 +31,6 @@ class TV:
         self.__canal = canal if canal>=1 and canal<=120 and self.__estado==True else self.__canal
     def getCanal(self):
         return self.__canal
-    def getPrecio(self):
-        return self.__precio
     def getEstado(self):
         return self.__estado
     
@@ -60,5 +58,5 @@ class TV:
     def setNumTV(cls,numTV):
         cls.numTV = numTV
     @classmethod
-    def getPrecio(cls):
+    def getNumTV(cls):
         return cls.numTV

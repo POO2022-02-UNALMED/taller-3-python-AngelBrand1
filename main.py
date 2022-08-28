@@ -3,29 +3,13 @@ from televisores.control import Control
 from televisores.marca import Marca
 
 if __name__ == "__main__":
-    marca1 = Marca("Semsung")
-    marca2 = Marca("Lj")
-    TV.setNumTV(10)
+    marca = Marca("Xiomi")
+
+    tv1 = TV(marca, True)
+
+    ok = False
+    if(tv1.getPrecio() == 500 and tv1.getCanal() == 1 and tv1.getVolumen() == 1):
+        ok = True
     
-    tv1 = TV(marca1, True)
-    tv2 = TV(marca2, False)
-    tv3 = TV(marca2, False)
+    print(ok)
 
-    tv1.setPrecio(2000)
-    tv2.setCanal(90)
-    tv1.setCanal(121)
-    tv2.setVolumen(7)
-
-    control1 = Control()
-    control1.enlazar(tv1)
-    control1.turnOff()
-    control1.setCanal(50)
-    control1.turnOn()
-    control1.canalUp()
-    control1.volumenUp()
-
-    print(tv2.getCanal())
-    print(tv1.getPrecio())
-    print(tv1.getMarca().getNombre())
-    print(tv1.getCanal())
-    print(TV.numTV)
